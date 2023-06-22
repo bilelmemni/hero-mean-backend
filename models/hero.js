@@ -3,7 +3,8 @@ const Hero=mongoose.model('hero',{
   
     name:String,
     power:Number,
-    image:String
+    image:String,
+    date:String
 
 })
 

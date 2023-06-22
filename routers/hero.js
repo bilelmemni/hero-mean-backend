@@ -22,6 +22,7 @@ router.post('/add',upload.any('image'),async(req,res)=>{
         data=req.body;
         prd=new Hero(data) 
         prd.image=filename
+        prd.date=new Date()
         savedHero=await prd.save()
         filename=''
         res.status(200).send(savedHero)
